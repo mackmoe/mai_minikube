@@ -14,7 +14,7 @@ Run the commands in order from that directory
 ```
 
 
-### Deploying the minikube dashboard
+##### Deploying the minikube dashboard
 Run the commands in order from that directory
 ---
 ```
