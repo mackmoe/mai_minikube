@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: minikube-deployment
+  namespace: default
+  labels:
+    app:  minikube-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: minikube-deployment
+  template:
+    metadata:
+      labels:
+        app:  minikube-deployment
+    spec:
+      containers:
+      - name: hello-container
+        image: gcr.io/google_containers/echoserver:1.4
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
